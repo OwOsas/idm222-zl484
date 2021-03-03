@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li, link{
+    list-style-type:none;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'AlegreyaSansSC'; 
+    font-weight: normal;
+}
+
+.first_page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------------------------------------------------------------- */
+.left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------------------------------------------------- */
+.introduction h1{
+    font-size: 8rem;
+    font-family: 'AlegreyaSansSC';
+    font-style: light;
+}
+.introduction h2{
+    font-size: 2rem;
+    align-items: center;
+}
+
+.line_2{
+    display: flex;
+    align-items: center;
+}
+
+.line_2 h2{
+    font-size: 2rem;
+    padding-right: 1.5rem;
+}
+
+.line_2 img{
+    height: 4rem;
+}
+
+.introduction p{
+    font-size: 1.5rem;
+}
+/* ------------------------------------------------------------- */
+.right{
+    width: 50%;
+    display: flex;  
+    justify-content: flex-end;
+}

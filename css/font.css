@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'AlegreyaSansSC';
+    src: url(../fonts/AlegreyaSansSC-Regular.woff)
+        format('woff');
+    font-weight: normal;
+    
+    font-family: 'AlegreyaSansSC';
+    src: url(../fonts/AlegreyaSansSC-Bold.woff)
+        format('woff');
+    font-weight: bold;
+
+    font-family: 'AlegreyaSansSC';
+    src: url(../fonts/AlegreyaSansSC-Italic.woff)
+        format('woff');
+    font-style: italic;
+
+    font-family: 'AlegreyaSansSC';
+    src: url(../fonts/AlegreyaSansSC-Light.woff)
+        format('woff');
+    font-weight: 500;
+
+    font-family: 'AlegreyaSansSC';
+    src: url(../fonts/AlegreyaSansSC-BoldItalic.woff)
+        format('woff');
+    font-weight: 900;
+
+    font-family: 'AlegreyaSans';
+    src: url(../fonts/AlegreyaSans-Regular.woff)
+        format('woff');
+    font-weight: normal;
+}
