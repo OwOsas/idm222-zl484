@@ -17,20 +17,79 @@ body{
     color: white;
     font-family: 'AlegreyaSansSC'; 
     font-weight: normal;
+    background: url('../img/BG.svg') no-repeat;
+    background-color: black;
+    background-size: 300vw;
+    background-position: -5% 200px;
 }
+
 
 .first_page{
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    background: url('../img/BG.svg') no-repeat;
+    /* background: url('../img/BG.svg') no-repeat;
     background-color: black;
     background-size: 300%;
-    background-position: -2% 38%;
+    background-position: -2% 38%; */
 }
 
+/* ------------------------------------------------------------- */
 
+#burger{
+    display: none;
+    width: 70px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    cursor: pointer;
+    transition: all.3s;
+}
+#burger_element{
+    content: '';
+    width: 50px;
+    height: 6px;
+    background-color: white;
+    margin: 4px;
+    transition: all .3s;
+}
+
+#burger_element::before,
+#burger_element::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 6px;
+    background-color: white;
+}
+
+#burger_element::before{ transform: translateY(-12px);
+    transition: all .3s;}
+#burger_element::after { transform: translateY(12px);
+    transition: all .3s;}
+
+#burger:hover{
+    opacity: .7;
+    transition: all .3s;
+}
+
+.open #burger_element{
+    width: 6px;
+    transition: all .3s;
+}
+
+.open #burger_element::before{
+    transform: rotate(-45deg) translate(-16px,-16px);
+    opacity: 1;
+    transition: all .3s;
+}
+
+.open #burger_element::after{
+    transform: rotate(45deg) translate(-16px,16px);
+    transition: all .3s;
+}
 
 /* ------------------------------------------------------------- */
 .left{
@@ -38,7 +97,7 @@ body{
     display: flex;
     padding-left: 7%;
     align-items: center;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 3px 3px 6px black;
 }
 /* ------------------------------------------------------------- */
 .introduction{
@@ -125,8 +184,7 @@ body{
 .menu li p:hover{
     color: black;
     background-color: white !important; 
-    font-size: 1.75rem;
-    transition: background-color .5s, color .25s, font-size .5s;
+    transition: background-color .5s, color .25s;
 }
 
 .menu li p:active{
@@ -137,8 +195,8 @@ body{
 
 @media screen and (max-width: 960px) {
     .first_page{
-        background-position: 12% 36%;
-        background-size: 600%;
+        background-position: 3% 36%;
+        background-size: 400%;
         
         flex-direction: column;
         justify-content: flex-start;
@@ -149,17 +207,17 @@ body{
         height: 75%;
     }
 
+    .introduction{
+        padding-top: 20%;
+    }
+
     .right{
         order: -1;
         width: 100%;
         justify-content: flex-end;
         align-items: center;
-        height: 10%;
-        /* padding: 5% 0 0 5%; */
-        background: rgba(0, 0, 0, 0.5);
-        /* position: -webkit-sticky;
-        position: sticky;
-        top: 0%; */
+        height: auto;
+        padding: 1% 2%;
     }
 
     .menu{
@@ -176,6 +234,7 @@ body{
 
     .menu li p{
         margin: .3rem;
+        padding: .1rem;
         width: auto;
     }
 
@@ -185,3 +244,18 @@ body{
         height: .15rem;
     }
 }
+
+@media screen and (max-width: 650px){
+    #burger{
+        display: flex;
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+.project_showcase{
+    height: 2000px;
+}
+
