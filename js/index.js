@@ -11,6 +11,3 @@ burger.addEventListener('click', function(){
         menu_open = false;
     }
 })
-
-let bg_top = window.screen.height;
-let bg_left = window.screen.width;

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&display=swap');
+
+
+html{
+    font-size: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li, link{
+    list-style-type:none;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    position: relative;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: normal;
+}
+
+/* --------------------------- */
+
+.menu{
+    position: absolute;
+    right: 5vw;
+    top: 5vh;
+    height: 100vh;
+}
+
+#burger{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+    background-color: white;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+#burger:hover{
+    background-color: grey;
+    transition: all .2s linear;
+}
+
+#burger_ele{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transition: all .3s;
+    border-radius: 5px;
+    position: relative;
+}
+
+#burger_ele::before,
+#burger_ele::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+#burger_ele::before{ transform: translateY(-10px);
+    transition: all .3s;}
+#burger_ele::after { transform: translateY(10px);
+    transition: all .3s;}
+
+.open #burger_ele{
+    width: 0px;
+    transition: all .3s;
+}
+
+.open #burger_ele::before{
+    transform: rotate(135deg) translate(10.5px,10.5px);
+    transition: all .3s;
+}
+
+.open #burger_ele::after{
+    transform: rotate(45deg) translate(-10.5px,10.5px);
+    transition: all .3s;
+}
+
+
+
+.menu_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.menu_item li{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: .5rem;
+    position: relative;
+}
+
+.menu_item li::after{
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0rem;
+    transition: width .3s;
+}
+
+.menu_item li:hover::after{
+    width: 9rem;
+    transition: width .3s;
+}
+
+.menu_item li:hover > .item{
+    color: black;
+    transition: color .3s;
+}
+
+.menu_item li a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    letter-spacing: .2rem;
+    z-index: 1;
+}
+
+#current_item a{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item_indicator{
+    position: absolute;
+    width: 2px;
+    height: 90%;
+    background-color: black;
+    right: -.5rem;
+    transition: all .3s;
+}
+
+.menu_item li:hover > .item_indicator{
+    height: 100%;
+    transition: all .3s;
+}
+
+
+#current_item .item_indicator{
+    background-color: white;
+}
+
+@media screen and (max-width: 960px){
+    .menu_item{
+        flex-direction: row;
+    }
+    .menu_item li{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 .7rem;
+    }
+
+    .item_indicator{
+        height: 2px;
+        width: 90%;
+        right: 0;
+        left: 5%;
+        bottom: -.1rem;
+        transition: all .3s;
+    }
+
+    .menu_item li::after{
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu_item li:hover::after{
+        width: 100%;
+        height: 100%;
+        transition: height .3s;
+    }
+
+    .menu_item li:hover > .item_indicator{
+        width: 100%;
+        left: 0;
+        transition: all .3s;
+    }
+}

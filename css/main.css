@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&display=swap');
+
+
 html{
     font-size: 100%;
 }
@@ -13,27 +16,31 @@ ul, li, link{
 }
 
 body{
+    margin: auto;
+    max-width: 2048px;
     background: black;
     color: white;
-    font-family: 'AlegreyaSansSC'; 
+    font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: normal;
-    background: url('../img/BG.svg') no-repeat;
+    /* background: url('../img/BG.svg') no-repeat;
     background-color: black;
     background-size: 300vw;
-    background-position: -5% 200px;
+    background-position: -5% 200px; */
 }
 
 
 .first_page{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    /* background: url('../img/BG.svg') no-repeat;
+    background: url('../img/BG.svg') no-repeat;
     background-color: black;
     background-size: 300%;
-    background-position: -2% 38%; */
+    background-position: -2% 38%;
+    position: relative;
 }
+
 
 /* ------------------------------------------------------------- */
 
@@ -43,25 +50,27 @@ body{
     height: 60px;
     align-items: center;
     justify-content: center;
-    margin: 5%;
+    margin: 2%;
     cursor: pointer;
     transition: all.3s;
 }
 #burger_element{
     content: '';
-    width: 50px;
-    height: 6px;
+    width: 45px;
+    height: 2px;
     background-color: white;
-    margin: 4px;
+    margin: 5px;
     transition: all .3s;
+    border-radius: 5px;
 }
 
 #burger_element::before,
 #burger_element::after{
     position: absolute;
     content: '';
-    width: 50px;
-    height: 6px;
+    width: 45px;
+    height: 2px;
+    border-radius: 5px;
     background-color: white;
 }
 
@@ -76,7 +85,7 @@ body{
 }
 
 .open #burger_element{
-    width: 6px;
+    width: 0px;
     transition: all .3s;
 }
 
@@ -98,6 +107,7 @@ body{
     padding-left: 7%;
     align-items: center;
     text-shadow: 3px 3px 6px black;
+    z-index: 1;
 }
 /* ------------------------------------------------------------- */
 .introduction{
@@ -108,6 +118,8 @@ body{
 
 .introduction h1{
     font-size: 8rem;
+    font-weight: lighter;
+    line-height: 7rem;
 }
 .introduction h2{
     font-size: 2rem;
@@ -118,7 +130,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: .5rem;
-    margin: 1rem 0;
+    margin: 0 0 1.5rem 0;
 }
 
 .line_2 h2{
@@ -132,6 +144,7 @@ body{
 
 .introduction p{
     font-size: 1.25rem;
+    font-weight: lighter;
     letter-spacing: .5rem;
     padding-left: .5rem;
     margin: 1rem 0;
@@ -143,6 +156,7 @@ body{
     display: flex;  
     justify-content: flex-end;
     padding: 5%;
+    z-index: 1;
 }
 
 .menu{
@@ -150,12 +164,14 @@ body{
     flex-direction: column;
     align-items: flex-end;
     height: 30%;
+    
 }
 
 .menu li{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all .3s;
 }
 
 .menu li p{
@@ -170,12 +186,17 @@ body{
 }
 
 .selector{
-    width: .2rem;
+    width: 2px;
     height: 70%;
     background-color: none;
 }
 
-#current_selector{
+#current_selector p{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#current_selector .selector{
     background-color: rgb(238, 238, 238);
     color: black;
 }
@@ -192,7 +213,152 @@ body{
     background-color: lightgrey;
 }
 
+.bottom_fade{
+    width: 100%;
+    bottom: -5%;
+    left: 0;
+    height: 50%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+    z-index: 0;
+}
 
+
+
+
+
+.project_showcase{
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw 20vh 10vw;
+    height: auto;
+}
+
+.project_showcase_ele{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 30vw;
+    width: 20vw;
+    min-width: 150px;
+    max-width: 250px;
+    max-height: 400px;
+    margin: 1.5%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+#ui{
+    background: url('../img/ui.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 30px;
+    
+}
+
+#vrar{
+    background: url('../img/vrar.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#threeD{
+    background: url('../img/gamers_nest_1.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 30px;
+}
+
+#more{
+    background-color: #1e1e1e;
+}
+
+.project_showcase_ele .bottom_fade{
+    bottom: 0;
+    height: 100%;
+    background: none;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.project_showcase_ele .bottom_fade::before{
+    position: absolute;
+    background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    content: '';
+    transition: height .3s;
+}
+
+.project_showcase_ele .bottom_fade:hover::before{
+    height: 200%;
+    transition: height .3s;
+}
+
+.project_showcase_ele .bottom_fade:hover > .category{
+    font-size: 2.5rem;
+    transition: font-size .3s;
+}
+
+#more .bottom_fade::before{
+    background: #1e1e1e;
+    transition: background .3s;
+}
+
+#more .bottom_fade:hover::before{
+    background: #0f0f0f;
+    transition: background .3s;
+}
+
+.arrow{
+    width: 69px;
+    height: 64px;
+    transition: width .3s, height .3s;
+    margin: 20px 20px 20px 7px;
+    z-index: 1;
+}
+
+.project_showcase_ele .bottom_fade:hover > .arrow{
+    width: 80px;
+    height: 76px;
+    transition: width .3s, height .3s;
+}
+
+.category{
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    text-align: center;
+    z-index: 1;
+    transition: font-size .3s;
+    max-width: 90%;
+}
+
+
+.footer{
+    height: 10vh;
+    width: 100%;
+    background-color: #1e1e1e;
+}
+
+.about_me{
+    padding-left: auto;
+    padding-right: auto;
+}
+
+
+
+/* -------------------------------------------- */
 @media screen and (max-width: 960px) {
     .first_page{
         background-position: 3% 36%;
@@ -217,7 +383,7 @@ body{
         justify-content: flex-end;
         align-items: center;
         height: auto;
-        padding: 1% 2%;
+        padding: 2% 3%;
     }
 
     .menu{
@@ -234,15 +400,20 @@ body{
 
     .menu li p{
         margin: .3rem;
-        padding: .1rem;
+        padding: .1rem 1rem;
         width: auto;
     }
 
 
     .selector{
         width: 93%;
-        height: .15rem;
+        height: 2px;
     }
+
+    .project_showcase{
+        padding: 0;
+    }
+    
 }
 
 @media screen and (max-width: 650px){
@@ -255,7 +426,4 @@ body{
     }
 }
 
-.project_showcase{
-    height: 2000px;
-}
 
