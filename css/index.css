@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    max-width: 1920px;
+    overflow-y: scroll;
+    margin: auto;
+}
+
+#white_bg{
+    position: absolute;
+    background-color: white;
+    width: 35%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    transition: left .4s;
+}
+
+.white_bg_left{
+    left: 0%;
+    transition: left .4s;
+}
+
+.white_bg_mid{
+    left: 33%;
+    transition: left .4s;
+}
+
+.white_bg_right{
+    left: 65%;
+    transition: left .4s;
+}
+
+#first_page{
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------------------------------------- */
+.introduction_box{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(10vh);
+}
+
+.introduction{
+    height: auto;
+}
+
+.introduction h1{
+    font-size: 8rem;
+    font-weight: 300;
+    line-height: 7.5rem;
+}
+
+.line_2{
+    display: flex;
+    align-items: center;
+    padding-left: .5rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.line_2 h2{
+    font-size: 2rem;
+    padding-right: 1.5rem;
+}
+
+.line_2 img{
+    height: 4rem;
+}
+
+.introduction p{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+    padding-left: .5rem;
+    margin: 1rem 0;
+    color: #1b1b1b;
+    text-align: center;
+}
+
+#first_page_bg{
+    position: relative;
+    width: 65%;
+    height: 100%;
+    background-image: url('../img/BG.svg');
+    background-size: 700%;
+    background-position: center;
+    z-index: -2;
+}
+
+#first_page_bg::after{
+    content: '';
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+    z-index: -2;
+}
+
+.next_page{
+    height: 64px;
+    width: 64px;
+    background-image: url('../img/next_page.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+#first_next_page{
+    transform: translateY(10vh);
+}
+
+/* -------------------------------- */
+.page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    max-width: 1920px;
+}
+
+/* ---------------------------- */
+.title{
+    width: 35%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 13vh 2.3rem auto 2rem 2% 64px 3%;  
+}
+
+.title_top{
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 2.3rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.title_mid{
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 11vh;
+    align-self: center;
+}
+
+.title_bot{
+    grid-column: 2;
+    grid-row: 4;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.title .next_page{
+    grid-column: 2;
+    grid-row: 6;
+    justify-self: center;
+}
+
+.content{
+    width: 65%;
+    height: 100vh;
+    padding: 4vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content_img{
+    height: 60%;
+    width: 100%;
+    align-self: center;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* ------------------------------------------ */
+#second_page{
+    scroll-snap-align: start;
+    flex-direction: row-reverse;
+}
+
+#second_page .title .title_top{
+    justify-self: start;
+}
+#second_page .title_bot{
+    justify-self: end;
+}
+
+#second_page .content .content_img{
+    background-image: url('../img/web_dev.jpg');
+    background-size: cover;
+}
+
+/* ------------------------------ */
+#third_page{
+    scroll-snap-align: start;
+    flex-direction: row;
+}
+
+#third_page .title{
+    justify-items: right;
+}
+
+#third_page .title_mid{
+    justify-self: right;
+    align-self: center;
+}
+
+#third_page .title_mid p{
+    font-size: 20vh;
+    line-height: 7rem;
+}
+
+#third_page .title_bot{
+    justify-self: start;
+}
+
+#third_page .content{
+    justify-content: start;
+}
+
+#third_page .content_img{
+    background-image: url('../img/vrar.png');
+}
+
+/* -------------------------- */
+#forth_page{
+    scroll-snap-align: start;
+    flex-direction: row-reverse;
+}
+
+
+#forth_page .title{
+    justify-items: right;
+}
+
+#forth_page .title_mid{
+    justify-self: right;
+    align-self: center;
+}
+
+#forth_page .title_bot{
+    justify-self: start;
+}
+
+#forth_page .content{
+    justify-content: start;
+}
+
+#forth_page .content_img{
+    background-image: url('../img/gamers_nest_1.jpg');
+}

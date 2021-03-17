@@ -1,1 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2769.26 2774.37"><defs><style>.cls-1{fill:none;stroke:#999;stroke-miterlimit:10;stroke-width:5px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_6" data-name="Layer 6"><g id="Layer_7" data-name="Layer 7"><circle class="cls-1" cx="791.71" cy="1982.66" r="789.21"/><circle class="cls-1" cx="1678.73" cy="1358.33" r="1088.03"/><circle class="cls-1" cx="1508.51" cy="1058.34" r="1055.84"/><circle class="cls-1" cx="578.66" cy="1058.34" r="125.33"/></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="4446.9655565167195" width="4434.368055302071">
+  <defs>
+    <rect id="rect-1" opacity="1" x="543.0008520288179" y="1312.2276907454861" width="1280" height="800"/>
+    <mask id="mask-2" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect opacity="1" x="0" y="0" width="4434.368055302071" height="4446.9655565167195" fill="Black"/>
+      <use xlink:href="#rect-1" fill="White"/>
+    </mask>
+    <rect id="rect-3" opacity="1" x="543.0008520288179" y="1312.2276907454861" width="1280" height="800"/>
+    <mask id="mask-4" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="0" y="0">
+      <rect opacity="1" x="0" y="0" width="4434.368055302071" height="4446.9655565167195" fill="white"/>
+      <use xlink:href="#rect-3" fill="black"/>
+    </mask>
+    <rect id="rect-9" opacity="1" x="723.0008520288179" y="1496.2276907454861" width="404.41486447982265" height="526.491280971216"/>
+    <mask id="mask-10" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect opacity="1" x="0" y="0" width="4434.368055302071" height="4446.9655565167195" fill="Black"/>
+      <use xlink:href="#rect-9" fill="White"/>
+    </mask>
+    <path id="path-11" opacity="1" fill-rule="evenodd" d="M1060.560081277135 1552.5233040932762C1025.132263661382 1519.4106449126966 977.5261337402139 1499.2276907454861 925.1752068169361 1499.2276907454861C820.9478326705913 1499.2276907454861 735.5414866326154 1579.3287900966025 727.6334916290991 1681.1896369092428C727.1590119288882 1686.3930547804766 727.0008520288178 1691.5964726517107 727.0008520288178 1696.7998905229447C727.0008520288178 1702.0033083941785 727.1590119288882 1707.2067262654125 727.6334916290991 1712.4101441366465C728.582451029521 1816.1631429024626 739.0210044341626 1917.70863105624 758.3165122427423 2016.100532621391C823.0039113715056 1987.5605739943198 890.5381887015346 1964.224033238483 960.2867046325484 1946.8793070010365C962.8172630336736 1927.642428810414 965.6641412349395 1908.563229949223 968.6691793362756 1889.6417104174632C1057.238723375658 1869.9317942385467 1123.5077215051247 1791.092129522881 1123.5077215051247 1696.7998905229447C1123.5077215051247 1639.877652598234 1099.3092567943647 1588.6318705330511 1060.560081277135 1552.5233040932762L1060.560081277135 1552.5233040932762Z"/>
+  </defs>
+  <g opacity="1">
+    <g opacity="1"/>
+    <g mask="url(#mask-2)">
+      <g opacity="1">
+        <use xlink:href="#rect-3" fill="rgb(0,0,0)" fill-opacity="1"/>
+        <use xlink:href="#rect-3" fill-opacity="0" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" mask="url(#mask-4)"/>
+      </g>
+      <g opacity="1">
+        <g opacity="1">
+          <ellipse fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter" opacity="1" rx="1264.6180700544105" ry="1265.8334719444615" cx="1267.1180700544105" cy="3178.6320845722585"/>
+        </g>
+        <g opacity="1">
+          <ellipse fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter" opacity="1" rx="1743.4167007339038" ry="1745.0922674551134" cx="2688.451354568167" cy="2177.1287649040823"/>
+        </g>
+        <g opacity="1">
+          <ellipse fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter" opacity="1" rx="1691.8192579364465" ry="1693.4452352749163" cx="2415.72201406733" cy="1695.9452352749163"/>
+        </g>
+        <g opacity="1">
+          <ellipse fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter" opacity="1" rx="200.781353494447" ry="200.97432087511532" cx="925.8057931644051" cy="1695.9452352749179"/>
+        </g>
+      </g>
+      <g opacity="0">
+        <g/>
+        <g mask="url(#mask-10)">
+          <g opacity="1">
+            <g opacity="1">
+              <use xlink:href="#path-11" fill="rgb(255,255,255)" fill-opacity="1"/>
+              <use xlink:href="#path-11" fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
