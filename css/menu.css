@@ -12,27 +12,22 @@ ul, li, link{
     text-decoration: none;
 }
 
-body{
-    background-color: black;
-    position: relative;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: normal;
-}
-
 /* --------------------------- */
 
 .menu{
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    top: 0;
     right: 0;
-    height: 100vh;
+    margin: 0 auto;
+    /* height: 100vh; */
     max-width: 1920px;
     margin: 0 auto;
     width: 100vw;
     padding: 5vh 3vw;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0, 0, 0, 100);
     transition: all .3s;
     z-index: 2;
 }
@@ -42,20 +37,25 @@ body{
     transition: all .3s;
 }
 
+.menu_fullscreen{
+    margin-top: 10vh;
+}
+
 #burger{
     position: absolute;
     right: 5vw;
-    top:5vw;
+    top:3vw;
     display: none;
     align-items: center;
     justify-content: center;
-    height: 55px;
-    width: 55px;
+    height: 53px;
+    width: 53px;
     border-radius: 30px;
-
     transition: all .2s linear;
     opacity: .5;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.13);
+    border: 2px rgba(0, 0, 0, 0.548) solid;
 }
 
 .burger_appear{
@@ -74,7 +74,8 @@ body{
     content: '';
     width: 30px;
     height: 2px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    border: 0px solid black;
     transition: all .3s;
     border-radius: 5px;
     position: relative;
@@ -86,7 +87,8 @@ body{
     position: absolute;
     width: 30px;
     height: 2px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    border: 0px solid black;
     transition: all .3s;
     border-radius: 5px;
 }
@@ -107,29 +109,33 @@ body{
 }
 
 .open #burger_ele::before{
+    background-color: rgb(255, 255, 255);
+    border: 0px solid black;
     transform: rotate(135deg) translate(10.5px,10.5px);
     transition: all .3s;
 }
 
 .open #burger_ele::after{
+    background-color: rgb(255, 255, 255);
+    border: 0px solid black;
     transform: rotate(45deg) translate(-10.5px,10.5px);
     transition: all .3s;
 }
-
-
 
 .menu_item{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    transition: visibility .5s, opacity .5s;
+    transition: all .5s;
+    height: auto;
 }
 
 #burger_close{
     visibility: hidden;
     opacity: 0;
     right: 0;
+    height: 0;
     width: 100% !important;
     background-color: rgba(0, 0, 0, 0);
     transition: all .5s;
@@ -198,14 +204,64 @@ body{
 
 #logo{
     position: absolute;
-    top: 5%;
-    left: 3%;
+    top: 3vw;
+    left: 4vw;
     height: 55px;
     width: 55px;
     background-image: url('../img/logo.svg');
     background-size: cover;
     background-position: center;
+    opacity: 1;
+    transition: all .3s;
 }
+
+.logo_disappear{
+    opacity: .5 !important;
+    transition: opacity .3s;
+}
+
+#name{
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+.footer img{
+    height: 7vh;
+}
+
+.footer p{
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 1rem;
+}
+
+.social_media{
+    display: flex;
+    align-items: center;
+}
+
+.social_media a{
+    margin: .5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social_media a img{
+    height: 5vh;
+    width: 5vh;
+}
+
+
 
 
 /* @media screen and (max-width: 960px){
@@ -267,13 +323,24 @@ body{
         background-color: rgb(0, 0, 0);
     }
 
+    #menu_close{
+        height: 10vh;
+    }
+
     #logo{
         top: 5vw;
         left: 5vw;
     }
 
+    .logo_disappear{
+        opacity: 0 !important;
+        transition: opacity .3s;
+    }
+
     #burger{
         display: flex;
+        right: 5vw;
+        top:5vw;
     }
 
     .menu_item{
@@ -330,16 +397,32 @@ body{
         transition: all .3s;
     }
 
+    .footer{
+        flex-direction: column;
+        padding: 1.5rem;
+        height: auto;
+    }
+
+    #name{
+        width: 100%;
+        border-bottom: 2px solid white;
+        padding-bottom: 1rem;
+    }
+
+    #name p{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer .social_media{
+        flex-direction: column;
+    }
+/* 
+    .footer p{
+        margin: 1rem;
+    } */
+
 }
 
 
 
-#content{
-    width: 70vw;
-    height: 200vh;
-    color: white;
-    /* background-image: url('../img/Mobile-Prototype.png'); */
-    background-size: cover;
-    background-position: center;
-    padding: 5vw;
-}

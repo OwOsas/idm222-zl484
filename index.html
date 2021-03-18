@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Sylar Li | Interactive Digital Media</title>
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -15,7 +15,7 @@
         </div>
         <ul class="menu_item" id="burger_close">
             <li id="current_item">
-                <a class="item" href="menu.html">Home</a>
+                <a class="item" href="index.html">Home</a>
                 <div class="item_indicator"></div>
             </li>
 
@@ -24,7 +24,7 @@
                 <div class="item_indicator"></div>
             </li>
 
-            <li>
+            <!-- <li>
                 <a class="item" href="">Contact</a>
                 <div class="item_indicator"></div>
             </li>
@@ -32,14 +32,13 @@
             <li>
                 <a class="item" href="">About</a>
                 <div class="item_indicator"></div>
-            </li>
+            </li> -->
         </ul>
         <a href="index.html" id="logo"></a>
     </div>
-
+    <div id="white_bg" class="white_bg_left"></div>
+    <div id="black_bg" class="black_bg_first"></div>    
     <div class='page' id="first_page">
-        <div id="white_bg" class="white_bg_left"></div>
-
         <div class="introduction_box">
             <div class="introduction">
                 <h1>Hello!</h1>
@@ -64,16 +63,17 @@
                  & <br>
                 Web Dev</div>
             <div class="title_bot">I also do...</div>
-            <img class='next_page' src="./img/next_page.svg" alt="">
+            <div class="next_page"></div>
             
             
         </div>
         
         <div class="content">
-            <div class="content_img"></div>
-            <p>
-                
-            </p>
+            <div class="content_img_container">
+                <div class="content_img"></div>
+                <a href="portfolio.html">See More Project Like This >></a>
+            </div>
+            
         </div>
     </div>
 
@@ -84,47 +84,58 @@
                 <p>VR<br></p>
                 <img src="./img/slash.svg" alt="">
                 <p>&ensp;AR</p>
+                <p class="small_screen_text">VR/AR</p>
                 </div>
                 
                 
             <div class="title_bot">And I love creating...</div>
-            <img class='next_page' src="./img/next_page.svg" alt="">
+            <div class="next_page"></div>
             
             
         </div>
         
         <div class="content">
-            <div class="content_img"></div>
-            <p>
-                
-            </p>
+            <div class="content_img_container">
+                <div class="content_img"></div>
+                <a href="portfolio.html">See More Project Like This >></a>
+            </div>
+            
         </div>
     </div>
 
     <div class="page" id="forth_page">
         <div class="title">
-            <div class="title_top">I also do...</div>
+            <div class="title_top">And I love creating...</div>
             <div class="title_mid">
-                <p>VR<br></p>
-                <img src="./img/slash.svg" alt="">
-                <p>&ensp;AR</p>
-                </div>
-                
-                
-            <div class="title_bot">And I love creating...</div>
-            <img class='next_page' src="./img/next_page.svg" alt="">
-            
-            
+                3D <br>
+                Art
+            </div>
+            <a href="./portfolio.html" class="title_bot">View All</a>
+            <a href="./portfolio.html" class="next_page"></a>
         </div>
         
         <div class="content">
-            <div class="content_img"></div>
-            <p>
-                
-            </p>
+            <div class="content_img_container">
+                <div class="content_img"></div>
+            <a href="portfolio.html">See More Project Like This >></a>
+        </div>
         </div>
     </div>
 
-</body>
+<div id='footer' class="footer">
+    <div id="name">
+        <p>Sylar Li | Zhengtian Li</p>
+    </div>
+    <div class="social_media">
+        <a href="mailto:ssyyllaarrlleeee@gmail.com">Send Me an Email</a>
+        <p>or</p>
+        <div><a href="https://www.artstation.com/shakalaka"><img src="img/icons/ArtStation.svg" alt=""></a>
+            <a href="https://www.instagram.com/skylunar_/"><img src="img/icons/instagram.svg" alt=""></a>
+            <a href="https://www.behance.net/sylarli"><img src="img/icons/behance.svg" alt=""></a></div>
+        
+    </div>
+</div>
 <script src='./js/index.js'></script>
+</body>
+
 </html>

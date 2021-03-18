@@ -5,23 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/portfolio.css">
+
 </head>
 <body>
-    <div class="container">
-        <h1>Portfolio</h1>
-        <div class="category">
-            <p class="category_selector" id="all">All</p>
-            <p>|</p>
-            <p class="category_selector" id="ui">UI Design</p>
-            <p>|</p>
-            <p class="category_selector" id="vrar">VR / AR</p>
-            <p>|</p>
-            <p class="category_selector" id="three_D">3D Art</p>
+    <div class="menu" id="menu_close">
+        <div id="burger">
+            <div id="burger_ele"></div>
         </div>
-        <div class="item_gird">
+        <ul class="menu_item" id="burger_close">
+            <li >
+                <a class="item" href="index.html">Home</a>
+                <div class="item_indicator"></div>
+            </li>
+
+            <li id="current_item">
+                <a class="item" href="portfolio.html">Portfolio</a>
+                <div class="item_indicator"></div>
+            </li>
+
+            <!-- <li>
+                <a class="item" href="">Contact</a>
+                <div class="item_indicator"></div>
+            </li>
+
+            <li>
+                <a class="item" href="">About</a>
+                <div class="item_indicator"></div>
+            </li> -->
+        </ul>
+        <a href="index.html" id="logo"></a>
+    </div>
+        <!-- portfolio -->
+
+    <div id="top_pad">        
+        <div class="top_pad_img"></div>
+        <!-- <img src="./img/sig_black.svg" alt=""> -->
+    </div>
+    <div class="portfolio">
+        <!-- 3D Modeling -->
+        <div class="category">
+            <h1>3D MODELING</h1>
+            <!-- <img src="img/arrow_right_black_solid.png" alt=""> -->
+        </div>
+        <div class="card_grid">
+            <div class="card">
+                <a href="substance_dirt.html">
+                    <img src="img/portfolio/substance_dirt.jpg" alt="">
+                    <div class="description">
+                        <h1>Substance Designer: Mud</h1>
+                        <p>2019</p>
+                    </div>                
+                </a>
+            </div>
+    
+            <div class="card">
+                <a href="gamers_nest.html">
+                    <img src="img/portfolio/gamers_nest_1.jpg" alt="">
+                    <div class="description">
+                        <h1>Gamer's Nest</h1>
+                        <p>2019</p>
+                    </div>    
+                </a>
+            </div>
+    
+            <div class="card">
+                <a href="mechanical_pencil.html">
+                    <img src="img/portfolio/mechanical_pencil_1.jpg" alt="">
+                    <div class="description">
+                        <h1>Mechanical Pencil</h1>
+                        <p>2019</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        
+
+
+    <div id='footer' class="footer">
+        <div id="name">
+            <p>Sylar Li | Zhengtian Li</p>
+        </div>
+        <div class="social_media">
+            <a href="mailto:ssyyllaarrlleeee@gmail.com">Send Me an Email</a>
+            <p>or</p>
+            <div><a href="https://www.artstation.com/shakalaka"><img src="img/icons/ArtStation.svg" alt=""></a>
+                <a href="https://www.instagram.com/skylunar_/"><img src="img/icons/instagram.svg" alt=""></a>
+                <a href="https://www.behance.net/sylarli"><img src="img/icons/behance.svg" alt=""></a></div>
             
         </div>
     </div>
+<script src='./js/menu.js'></script>
 </body>
+
 </html>

@@ -1,73 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&display=swap');
 
 
-html{
-    font-size: 100%;
-}
-* {
+*{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-ul, li, link{
-    list-style-type:none;
-    text-decoration: none;
+    max-width: 100vw;
 }
 
 body{
-    background-color: black;
-    position: relative;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    margin: 0;
+    padding: 0;    
+    font-family: 'Alegreya Sans'; 
     font-weight: normal;
-    padding: 1% 3%;
 }
 
-.container{
+a{
+    color: black;
+    text-decoration: none;}
+
+/* #first_page{
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    color: white;
+    justify-content: space-between;
+} */
+
+/* ------------------------------------------ */
+#top_pad{
+    height: 13vh;
+    width: 100vw;
+    padding: 3vw;
+    margin-bottom: 2vw;
 }
 
-.container > *{
-    margin: 1rem;
+.top_pad_img{
+    height: 15vw;
+    width: 23.55vw;
+    max-width: 119px;
+    max-height: 76px;
+    margin: auto;
+    background-image: url('../img/sig_black.svg');
+    background-size: cover;
+    background-position: center;
 }
 
-.container h1{
-    font-size: 4rem;
-
-}
 
 .category{
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.category p{
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: lightgrey;
+.category h1{
+    margin: 0 5vw;
+    width: 100%;
+    font-family: 'Alegreya Sans SC';
+    font-size: 1.5em;
+    border-bottom: black 2px solid;
 }
 
-.category_selector{
-    cursor: pointer;
-    margin: 0 1rem;
-    position: relative;
+.category img{
+    height: 3em;
+    padding: 7px;
 }
 
-.category_selector::after{
-    content: '';
-    left: -5%;
-    bottom: 0;
-    height: 2px;
-    width: 00;
-    background-color: white;
-    position: absolute;
-    transition: all .3s;
+.card_grid{
+    margin: 5vw;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    gap: 2vw;
 }
 
-.category_selector:hover::after{
-    width: 110%;
-    transition: all .3s;
+.card{
+    /* margin: 0 10vw 5vh 10vw; */
+    max-width: 450px;
+    justify-self: center;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    background-size: contain;
+}
+
+.description{
+    margin: 1vh 0;
+    font-family: 'Alegreya Sans SC';
+    line-height: 2.05em;
+}
+.description h1{
+    margin: 0;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.description p{
+    margin: 0;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 650px){
+    #top_pad{
+        height: 18vh;
+        margin-bottom: 2vw;
+    }
+
+    .card_grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 960px){
+    #top_pad{
+        height: 35vh;
+        margin-bottom: 2vw;
+        background-color: black;
+    }
+
+    .card_grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .card_grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

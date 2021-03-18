@@ -1,48 +1,70 @@
 function white_bg_down(){
     console.log('down');
-    if (scroll_pos>0 && scroll_pos<=window.innerHeight/5){
-        white_bg.setAttribute('class', 'white_bg_left')
+    if (scroll_pos>0 && scroll_pos<=window.innerHeight*.8){
+        white_bg.setAttribute('class', 'white_bg_left');
+        black_bg.setAttribute('class','black_bg_first');
         console.log('left');
     }
-    else if(scroll_pos>window.innerHeight/5 && scroll_pos<=window.innerHeight){
+    else if(scroll_pos>window.innerHeight*.8 && scroll_pos<=window.innerHeight*1.5){
         white_bg.setAttribute('class', 'white_bg_right');
+        black_bg.setAttribute('class','black_bg_second');
         console.log('right');
     }
-    else if(scroll_pos>window.innerHeight*1.4 && scroll_pos<=window.innerHeight*2){
+    else if(scroll_pos>window.innerHeight*1.5 && scroll_pos<=window.innerHeight*2.5){
         white_bg.setAttribute('class', 'white_bg_left');
+        black_bg.setAttribute('class','black_bg_third');
     }
-    else if(scroll_pos>window.innerHeight*2.4 && scroll_pos<=window.innerHeight*3){
+    else if(scroll_pos>window.innerHeight*2.5 && scroll_pos<=window.innerHeight*3){
         white_bg.setAttribute('class', 'white_bg_right');
+        black_bg.setAttribute('class','black_bg_forth');
+    }
+    else if(scroll_pos>window.innerHeight*3){
+        white_bg.setAttribute('class', 'white_bg_right');
+    }
+    else{
+        white_bg.setAttribute('class', 'white_bg_left');
     }
 
 }
 
 function white_bg_up(){
     console.log('up');
-    if (scroll_pos>=0 && scroll_pos<window.innerHeight*3/5){
-        white_bg.setAttribute('class', 'white_bg_left')
+    if (scroll_pos<window.innerHeight*.5){
+        white_bg.setAttribute('class', 'white_bg_left');
+        black_bg.setAttribute('class','black_bg_first');
         console.log('left');
     }
-    else if(scroll_pos>=window.innerHeight && scroll_pos<window.innerHeight*1.6){
+    else if(scroll_pos>=window.innerHeight*.5 && scroll_pos<window.innerHeight*1.5){
         console.log('right');
         white_bg.setAttribute('class', 'white_bg_right');
+        black_bg.setAttribute('class','black_bg_second');
     }
-    else if(scroll_pos>=window.innerHeight*2 && scroll_pos<window.innerHeight*2.6){
+    else if(scroll_pos>=window.innerHeight*1.5 && scroll_pos<window.innerHeight*2.5){
         white_bg.setAttribute('class', 'white_bg_left');
+        black_bg.setAttribute('class','black_bg_third');
     }
-    else if(scroll_pos>=window.innerHeight*3 && scroll_pos<window.innerHeight*3.6){
+    else if(scroll_pos>=window.innerHeight*2.5 && scroll_pos<window.innerHeight*3.5){
         white_bg.setAttribute('class', 'white_bg_right');
+        black_bg.setAttribute('class','black_bg_forth');
+    }
+    else if(scroll_pos>=window.innerHeight*4){
+        white_bg.setAttribute('class', 'white_bg_right');
+    }
+    else{
+        white_bg.setAttribute('class', 'white_bg_left');
     }
 }
 
 function f_burger_close(){
     burger.classList.remove('open');
+    menu_items.classList.remove('menu_fullscreen');
     f_menu_disappear();
     burger_open = false;
 }
 
 function f_burger_open(){
     burger.classList.add('open');
+    menu_items.classList.add('menu_fullscreen');
     f_menu_appear(true);
     burger_open = true;
 }
@@ -77,10 +99,25 @@ function f_menu_disappear(){
     menu_open = false;
 }
 
+function f_logo_appear(){
+    logo.classList.remove('logo_disappear');
+}
+
+function f_logo_disappear(){
+    logo.classList.add('logo_disappear');
+}
+
 
 const burger = document.getElementById('burger');
 const menu = document.querySelector('.menu');
 const menu_items = document.querySelector('.menu_item');
+const logo = document.getElementById('logo');
+
+var last_pos = 0;
+var scroll_pos = window.scrollY;
+const black_bg = document.getElementById('black_bg');
+const white_bg = document.getElementById('white_bg');
+
 var menu_open = false;
 var burger_open = false;
 var burger_appear = false;
@@ -109,18 +146,18 @@ window.addEventListener('resize', function(){
 
 
 
-var last_pos = 0;
-var scroll_pos;
-const white_bg = document.getElementById('white_bg');
+
 console.log(window.innerHeight);
 
 window.addEventListener('load',function(){
     console.log('load');
-    if(window.innerWidth > 950 && scroll_pos > 0){
+    if(window.innerWidth > 950 && scroll_pos > 100){
+        console.log('top bur ap');
         f_menu_disappear();
         f_burger_appear();
     }
-    else if(window.innerWidth > 950 && scroll_pos <= 0){
+    else if(window.innerWidth > 950 && scroll_pos <= 100){
+        console.log('top menu ap');
         f_menu_appear();
         f_burger_disappear();
     }
@@ -129,7 +166,7 @@ window.addEventListener('load',function(){
         f_menu_disappear();
     }
 
-    scroll_pos = window.scrollY;
+
     white_bg_down();
     console.log(scroll_pos);
 },false)
@@ -146,17 +183,17 @@ window.addEventListener('scroll', function(){
         else{
             f_burger_appear();
             f_menu_disappear();
-
+            f_logo_appear();
         }
         white_bg_up();
 
   }
     else{
     //down
-        f_burger_disappear();
+        f_burger_appear();
         f_menu_disappear();
         white_bg_down();
-        
+        f_logo_disappear();
     }
 	last_pos = (document.body.getBoundingClientRect()).top;
 
