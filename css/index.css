@@ -346,10 +346,6 @@ body{
 
 @media screen and (max-width: 960px){
 
-    html{
-        /* scroll-snap-type: y mandatory; */
-    }
-
     #white_bg{
         position: fixed;
         width: 100%;
