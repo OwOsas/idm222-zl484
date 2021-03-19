@@ -12,6 +12,33 @@ ul, li, link{
     text-decoration: none;
 }
 
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;    
+    font-family: 'AlegreyaSansSC', Fallback, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2{
+    font-family: 'AlegreyaSansSC', Fallback, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+p{
+    font-family: 'AlegreyaSans', Fallback, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    font-family: 'AlegreyaSansSC', Fallback, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
 /* --------------------------- */
 
 .menu{
@@ -158,6 +185,12 @@ ul, li, link{
     height: 100%;
     width: 0rem;
     transition: width .3s;
+}
+
+.item{
+    font-family: 'AlegreyaSansSC', Fallback, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .menu_item li:hover::after{

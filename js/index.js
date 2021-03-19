@@ -175,7 +175,7 @@ window.addEventListener('scroll', function(){
     scroll_pos = this.scrollY;
     if((document.body.getBoundingClientRect()).top > last_pos){
     //up
-        if (scroll_pos>=0 && scroll_pos<window.innerHeight*1/5 && window.innerWidth>960){
+        if (scroll_pos<window.innerHeight*1/5 && window.innerWidth>960){
             console.log('first');
             f_menu_appear(false);
             f_burger_disappear();
@@ -190,10 +190,17 @@ window.addEventListener('scroll', function(){
   }
     else{
     //down
-        f_burger_appear();
-        f_menu_disappear();
+    if (scroll_pos<window.innerHeight*1/5 && window.innerWidth>960){
+        console.log('first');
+        f_menu_appear(false);
+        f_burger_disappear();
+    }
+        else{
+            f_burger_appear();
+            f_menu_disappear();
+            f_logo_disappear();
+    }
         white_bg_down();
-        f_logo_disappear();
     }
 	last_pos = (document.body.getBoundingClientRect()).top;
 
